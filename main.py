@@ -13,60 +13,66 @@ def main():
             operator_str = str(input('請輸入您要練習的運算符代碼：'))
         except ValueError:
             print('輸入無效，請重新輸入')
-            continue
+            continue # 當用戶輸入無效時，重新開始主循環
 
         # 檢查使用者是否選擇結束
         if operator_str == '0':
             print('感謝您的使用，再見！')
-            break
+            break # 若使用者選擇 0，退出主循環，結束程式
 
         # 檢查輸入的運算符是否有效
         if operator_str not in ['1', '2', '3', '4']:
             print('無效的選項，請重新輸入')
-            continue
+            continue # 若運算符無效，重新開始主循環
 
         while True:
-            operation = convert_operator(operator_str)
+            operation = convert_operator(operator_str) # 轉換為對應的運算符
             if not get_check_number(f'練習{operation}法，正確請按 \'1\'，重新選擇運算符號請按 \'0\'： '):
-                break
+                break # 若使用者選擇重新選擇運算符，退出此循環，回到主循環
 
+            # 透過get_digit_numbers_with_confirmation()給digits_of_first_number, digits_of_second_number值
             digits_of_first_number, digits_of_second_number = get_digit_numbers_with_confirmation()
             print(f'已確認的第一個數字位數：{digits_of_first_number}，第二個數字位數：{digits_of_second_number}')
 
+            # 透過get_random_numbers()來生成隨機數
             first_numbers = get_random_numbers(digits_of_first_number)
             second_numbers = get_random_numbers(digits_of_second_number)
 
             if operation == '/':
                 while True:
                     try:
+                        # 將使用者輸入的答案與程式計算的答案分別存在變數中
                         user_quotient = int(input(f'{first_numbers} / {second_numbers} 的商為：'))
                         user_remainder = int(input(f'{first_numbers} / {second_numbers} 的餘數為：'))
                         correct_quotient, correct_remainder = compute(first_numbers, second_numbers, '/')
+
+                        # 檢查使用者輸入的商和餘數是否正確
                         if user_quotient == correct_quotient and user_remainder == correct_remainder:
                             if input(f'恭喜您答對了，繼續請按 \'1\'，重新選擇數字位數請按 \'0\'： ') == '1':
                                 first_numbers = get_random_numbers(digits_of_first_number)
                                 second_numbers = get_random_numbers(digits_of_second_number)
-                                continue
+                                continue # 答對後並選擇繼續，生成新的隨機數後重新作答
                             else:
-                                break
+                                break # 若選擇不繼續，退出除法循環，回到選擇數字位數的流程
                         else:
                             print('很抱歉您答錯了，請重新作答')
-                            continue
+                            continue # 若答錯，重新開始此除法作答循環
                     except ValueError:
                         print("請輸入數字！")
             else:
                 while True:
                     try:
+                        # 檢查使用者輸入的答案是否正確
                         if int(input(f'{first_numbers}{operation}{second_numbers}=')) == compute(first_numbers, second_numbers, operation):
                             if input(f'恭喜您答對了，繼續請按 \'1\'，重新選數字擇位數請按 \'0\'： ') == '1':
                                 first_numbers = get_random_numbers(digits_of_first_number)
                                 second_numbers = get_random_numbers(digits_of_second_number)
-                                continue
+                                continue # 答對後選擇繼續，生成新隨機數並重新作答
                             else:
-                                break
+                                break # 若選擇不繼續，退出非除法循環，回到選擇數字位數的流程
                         else:
                             print('很抱歉您答錯了，請重新作答')
-                            continue
+                            continue # 若答錯，重新開始此非除法作答循環
                     except ValueError:
                         print("請輸入數字！")
 
@@ -80,8 +86,6 @@ def convert_operator(operator_str: str) -> str:
 
     返回:
     str: 對應的運算符號。選擇 '1' 返回 '+'，'2' 返回 '-'，'3' 返回 '*'，'4' 返回 '/'。
-
-    若 `operator_str` 的值不在 '1'、'2'、'3' 或 '4' 之中，將引發 MatchError。
     """
     match operator_str:
         case '1':

@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9657f8ce-3383-438b-98bf-6696c4c2b3fb" name="Changes" comment="Complete the first version">
+    <list default="true" id="9657f8ce-3383-438b-98bf-6696c4c2b3fb" name="Changes" comment="Complete the 1.02 version. Revise prompt string.">
       <change afterPath="$PROJECT_DIR$/.idea/ArithmeticPractice.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
@@ -42,13 +42,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.main.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main"
   }
-}</component>
+}]]></component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -73,12 +73,30 @@
       <option name="project" value="LOCAL" />
       <updated>1730268152264</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Complete the 1.01 version. Revise welcome title.">
+      <option name="closed" value="true" />
+      <created>1730268393108</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1730268393108</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Complete the 1.02 version. Revise prompt string.">
+      <option name="closed" value="true" />
+      <created>1730269066761</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1730269066761</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="'finish'" />
     <MESSAGE value="Complete the first version" />
-    <option name="LAST_COMMIT_MESSAGE" value="Complete the first version" />
+    <MESSAGE value="Complete the 1.01 version. Revise welcome title." />
+    <MESSAGE value="Complete the 1.02 version. Revise prompt string." />
+    <option name="LAST_COMMIT_MESSAGE" value="Complete the 1.02 version. Revise prompt string." />
   </component>
 </project>
