@@ -142,7 +142,7 @@ def get_digit_numbers_with_confirmation() -> tuple[int, int]:
         print(f'第一個數字的位數：{digits_of_first_number}，第二個數字的位數：{digits_of_second_number}。')
 
         # 確認輸入是否正確
-        check_number = get_check_number('正確請按 \'1\'，重新輸入請按 \'0\'： ')
+        check_number = get_check_number('正確請按 \'1\'，重新選擇數字位數請按 \'0\'： ')
         if check_number:  # 若確認輸入正確
             return digits_of_first_number, digits_of_second_number
 
