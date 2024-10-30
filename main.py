@@ -2,7 +2,7 @@ import random
 
 def main():
     while True:
-        print('歡迎來到算是練習')
+        print('歡迎來到四則運算練習')
         print('1. 加')
         print('2. 減')
         print('3. 乘')
